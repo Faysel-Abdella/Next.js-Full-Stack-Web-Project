@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="winter">
       <body className={inter.className}>
+
        <NavBar/>
        <main className='max-w-7xl ml-auto mr-auto py-3'>
         {children}
