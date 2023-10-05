@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import schema from "./schema";
+
 
 export function GET(request: NextRequest) {
     //Fetch users form data base
@@ -11,8 +13,11 @@ export function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
     const body = await request.json()
-    if(!body.name)
-        return NextResponse.json({error: "Name is required", status: 400})
+
+     const validationResult = schema.safeParse(body) // returns an object that contains the result of validationResult
+    if (!validationResult.success) 
+        return NextResponse.json(validationResult.error.errors, {status: 400})
+    
     return NextResponse.json({id: 20, name: body.name}, {status: 201})
 }
 
