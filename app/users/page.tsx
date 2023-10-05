@@ -11,7 +11,6 @@ interface Props {
 }
 
 const UserPage = async ({searchParams}: Props) => {
-   
 const {sortOrder} = searchParams
 console.log(sortOrder)
   return (
