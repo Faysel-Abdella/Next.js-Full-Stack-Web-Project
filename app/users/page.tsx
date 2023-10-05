@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import UserTable from "./UserTable"
 
 import Link from "next/link"
@@ -17,7 +18,9 @@ console.log(sortOrder)
     <>
       <h1>Users</h1>
       <Link href='/users/new' className="btn">New user</Link>
+      <Suspense fallback={<p>Loading...</p>}>
       <UserTable sortOrder={sortOrder} />
+      </Suspense>
     </>
   )
 }
