@@ -1,11 +1,14 @@
+"use client"
 
+import { useRouter } from "next/navigation";
 
-const page = () => {
+const NewUserPage = () => {
+const router = useRouter();
   return (
-    <div>
-        New user page
-    </div>
+    <button className="btn btn-primary"
+    onClick={() => router.push('/users') }
+    >Create</button>
   )
 }
 
-export default page
+export default NewUserPage

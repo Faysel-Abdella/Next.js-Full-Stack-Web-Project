@@ -1,5 +1,7 @@
 import UserTable from "./UserTable"
 
+import Link from "next/link"
+
 
 interface Props {
     searchParams: {
@@ -14,6 +16,7 @@ console.log(sortOrder)
   return (
     <>
       <h1>Users</h1>
+      <Link href='/users/new' className="btn">New user</Link>
       <UserTable sortOrder={sortOrder} />
     </>
   )
