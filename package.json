@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview-email": "email dev -p 3030"
+
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^2.0.1",
+    "@react-email/components": "^0.0.7",
     "@types/node": "20.8.2",
     "@types/react": "18.2.24",
     "@types/react-dom": "18.2.8",
@@ -25,6 +28,7 @@
     "prisma": "^5.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-email": "^1.9.5",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
     "zod": "^3.22.4"
